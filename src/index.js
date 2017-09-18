@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styles from './style.css'
 import registerServiceWorker from './registerServiceWorker';
 
 var SearchExample = React.createClass({
@@ -9,10 +10,6 @@ var SearchExample = React.createClass({
     },
 
     handleChange: function(e){
-
-        // If you comment out this line, the text box will not change its value.
-        // This is because in React, an input cannot change independently of the value
-        // that was assigned to it. In our case this is this.state.searchString.
 
         this.setState({searchString:e.target.value});
     },

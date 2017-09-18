@@ -6,11 +6,12 @@ import registerServiceWorker from './registerServiceWorker';
 var SearchExample = React.createClass({
 
     getInitialState: function(){
+      // sets the initial state value to an empty string
         return { searchString: '' };
     },
 
     handleChange: function(e){
-
+        // change the state when searchString has a new value
         this.setState({searchString:e.target.value});
     },
 
@@ -23,7 +24,6 @@ var SearchExample = React.createClass({
         if(searchString.length > 0){
 
             // We are searching. Filter the results.
-
             libraries = libraries.filter(function(l){
                 return l.name.toLowerCase().match( searchString );
             });
@@ -34,7 +34,7 @@ var SearchExample = React.createClass({
                     <input type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="Type here" />
 
                     <ul>
-
+                        // .map() loops through the array of list items
                         { libraries.map(function(l){
                             return <li>{l.name} <a href={l.url}>{l.url}</a></li>
                         }) }

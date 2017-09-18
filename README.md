@@ -4,3 +4,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 The app was build with create-react-app
 
 To run the project, ```yarn start```
+
+![](src/image.png?raw=true)
